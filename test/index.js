@@ -52,7 +52,7 @@ test('\nmax satisfying', function(t) {
 
 test('\nrange syntax', function(t) {
   var versions = ['1.0.0', '1.1.0', '1.1.1', '2.0.0'];
-  ['1.1.x', 'v1', '1.x', '1', '1.1'].forEach(function(range) {
+  ['1.1.x', 'v1', '1.x', '1', '1.1', '1.x.x'].forEach(function(range) {
     var satisfying = semver.maxSatisfying(versions, range);
     t.equal(satisfying, versions[2], 'range: ' + range + ' resolves to ' + satisfying);
   });
@@ -66,7 +66,7 @@ test('\nrange syntax', function(t) {
 
 test('\ninvalid range syntax', function(t) {
   var versions = ['1.0.0', '1.1.0', '1.1.1', '2.0.0'];
-  ['prod', 'x'].forEach(function(range) {
+  ['prod', 'x', 'x.x.x'].forEach(function(range) {
     var satisfying = semver.maxSatisfying(versions, range);
     t.notOk(satisfying, 'range: ' + range + ' should be null');
   });
