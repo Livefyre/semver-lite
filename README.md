@@ -31,7 +31,7 @@ Nothing fancy, a range should look like an abbreviated version.
 Valid ranges include:
 
 ```
-var validRanges = ['1.1.x', 'v1', '=1', '1.x', '1', 'x'];
+var validRanges = ['1.1.x', 'v1', '=1', '1.x', '1', 'x1'];
 ```
 
 Something like `'1.x.3'` does not work, that would be silly.
